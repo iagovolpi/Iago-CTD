@@ -1,92 +1,121 @@
-function loopDePares(a){
-    for (let i=0;i<=100;i++){
-        if ((i+a)%2 == 0){
-            console.log("O resultado da soma do "+a+" + "+i+" é igual a "+(i+a)+" e é par");        
-        }
-        else
-        console.log(i);
-    }
+function Dados(altura, sexo) {
+    this.altura = altura;
+    this.sexo = sexo;
 }
-loopDePares(3);
 
+let pessoa1 = new Dados(1.90, "M");
+let pessoa2 = new Dados(1.80, "F");
+let pessoa3 = new Dados(1.20, "F");
+let pessoa4 = new Dados(1.70, "M");
+let pessoa5 = new Dados(1.60, "F");
+let pessoa6 = new Dados(1.65, "M");
+let pessoa7 = new Dados(1.95, "M");
+let pessoa8 = new Dados(2.00, "F");
+let pessoa9 = new Dados(1.80, "M");
+let pessoa10 = new Dados(1.82, "F");
+let pessoa11 = new Dados(1.63, "F");
+let pessoa12 = new Dados(1.69, "M");
+let pessoa13 = new Dados(1.70, "M");
+let pessoa14 = new Dados(1.55, "M");
+let pessoa15 = new Dados(1.50, "F");
 
-function loopDeImpares(a,b){
-    for (let i=0;i<=100;i++){
-        if ((i+a)%2 == 0){
-            console.log(b);
-        }
-        else 
-        console.log(i);
+lista = [pessoa1,pessoa2,pessoa3,pessoa4,pessoa5,pessoa6,pessoa7,pessoa8,pessoa9,pessoa10,pessoa11,pessoa12,pessoa13,pessoa14,pessoa15];
+
+function menor(array){
+    let alturas = [];
+    for (let i=0; i<array.length; i++){
+        alturas.push(array[i].altura);
     }
+    return Math.min.apply(Math,alturas);
 }
-loopDeImpares(5,"a soma é ímpar");
+console.log(menor(lista));
 
 
-function soma(a){
-    soma = 0
-    for (let i=0; i<=a; i++ ){
-        soma = soma + i
-    }
-    console.log(soma);
-    
-}
-soma(3);
-
-
-function newArray(a){
-    let array =[]
-    for (let i=0;i<=a; i++){
-        array.push(i);
-    }
-    console.log(array);
-}
-newArray(6);
-
-
-function split(word){
-    let palavra = [];
-    for (i=0; i<word.length;i++){
-        palavra.push(word[i]);
-    }
-    console.log(palavra);
-}
-split("macarrão");
-
-
-function moverZeros(array){
-    for (i=0; i<array.length;i++){
-        if (array[i] == 0){
-            array.splice(i,1);
-            array.push(0);
+function media(array){
+    let alturas = [];
+    let soma = 0;
+    for (let i=0; i<array.length; i++){
+        if (array[i].sexo == "F") {
+            alturas.push(array[i].altura);
         }
     }
-    console.log(array);
-}
-moverZeros([1,2,0,6,0,4,"alo",7,8]);
-
-
-function arrayHandler(a,b){
-    for (i=0; i<a.length;i++){
-        console.log("Eu sou "+a[i]+" e eu sou "+b[i]);
+    for (let j=0; j < alturas.length; j++){
+        soma = soma + alturas[j];
     }
+    return soma/alturas.length;
 }
-arrayHandler([1,2,3], ["o","l","á"]);
+console.log(media(lista));
 
 
-function arrayObjects(a) {
-    let arr = [];
-    for(let i = 1; i <= a; i++) {
-        arr.push({valor: i});
+function homens(array){
+    let soma = 0;
+    for (let i=0; i<array.length; i++){
+        if (array[i].sexo == "M"){
+            soma = soma + 1;
+        }
     }
-    console.log(arr);    
+    return soma;
 }
-arrayObjects(7);
+console.log(homens(lista));
 
-function arrayObjectsTwo(num, palavra) {
-    let arr = [];
-    for(let i = 1; i <= num; i++) {
-        arr.push({[palavra]: i})
-    }
-    console.log(arr);       
+
+function Notas(a,b) {
+    this.idade = a;
+    this.nota = b;
 }
-arrayObjectsTwo(10, 'tagname');
+
+let nota1 = new Notas(20,1);
+let nota2 = new Notas(25,3);
+let nota3 = new Notas(22,2);
+let nota4 = new Notas(34,2);
+let nota5 = new Notas(28,1);
+let nota6 = new Notas(44,3);
+let nota7 = new Notas(24,3);
+let nota8 = new Notas(24,1);
+let nota9 = new Notas(54,1);
+let nota10 = new Notas(45,2);
+let nota11 = new Notas(30,1);
+let nota12 = new Notas(33,3);
+let nota13 = new Notas(42,1);
+let nota14 = new Notas(50,2);
+let nota15 = new Notas(47,2);
+
+listaNotas = [nota1,nota2,nota3,nota4,nota5,nota6,nota7,nota8,nota9,nota10,nota11,nota12,nota13,nota14,nota15];
+
+function mediaIdade(array){
+    let idade = [];
+    let soma = 0;
+    for (let i=0; i<array.length; i++){
+        if (array[i].nota == 3) {
+            idade.push(array[i].idade);
+        }
+    }
+    for (let j=0; j < idade.length; j++){
+        soma = soma + idade[j];
+    }
+    return soma/idade.length;
+}
+console.log(mediaIdade(listaNotas));
+
+function regular(array){
+    let soma = 0;
+    for (let i=0; i<array.length; i++){
+        if (array[i].nota == 1){
+            soma = soma + 1;
+        }
+    }
+    return soma;
+}
+console.log(regular(listaNotas));
+
+
+function bom(array){
+    let soma = 0;
+    for (let i=0; i<array.length; i++){
+        if (array[i].nota == 2){
+            soma = soma + 1;
+        }
+    }
+    return (soma/array.length)*100+"%";
+}
+console.log(bom(listaNotas));
