@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Music - O seu site de Músicas</title>
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+  <!-- Progress Bar -->
+  <script src="js/progressbar.min.js"></script>
+  <!-- Parallax -->
+  <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container" id="nav-container">
+      <!-- add essa class -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <a class="navbar-brand" href="index.html">
+          <img id="logo" src="img/logo.png" alt="My Music"> My Music
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" id="home-menu" href="#">Home</span></a>
+            <a class="nav-item nav-link" id="about-menu" href="#">My Music</a>
+            <a class="nav-item nav-link" id="top-playlists" href="#">Playlists</a>
+            <a class="nav-item nav-link" id="top-10" href="#">Top Mais</a>
+            <a class="nav-item nav-link" id="login" href="login/form.html">Login</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container-fluid">
+      <!-- slider -->
+      <div id="mainSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+          <li data-target="#mainSlider" data-slide-to="1"></li>
+          <li data-target="#mainSlider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/banner1.png" class="d-block w-100" alt="Projetos de e-commerce">
+            <div class="carousel-caption d-md-block">
+              <h2>Quer ouvir as melhores playlists?</h5>
+              <p>Aqui no My Music você encontra!</p>
+              <a href="login/form.html" class="main-btn">Acessar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner2.png" class="d-block w-100" alt="Engenharia de software">
+            <div class="carousel-caption d-md-block">
+              <h2>Veja os artistas mais ouvidos do momento!</h5>
+              <p>Aqui no My Music você encontra!</p>
+              <a href="login/form.html" class="main-btn">Acessar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/banner3.png" class="d-block w-100" alt="Manutenção em software">
+            <div class="carousel-caption d-md-block">
+              <h2>Navegue pela nossa comunidade e crie sua rede de contatos!</h5>
+              <p>Aqui no My Music você encontra!</p>
+              <a href="login/form.html" class="main-btn">Acessar</a>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- Sobre o My Music -->
+      <div id="about-area">
+        <div class="container">
+            <div class="row">
+              <div class="col-12"> 
+                <h3 class="main-title">Sobre o My Music</h3>
+              </div>
+              <div class="col-md-6">
+                <img class="img-fluid" src="img/foto.jpg" alt="Agência hDC">
+              </div>
+              <div class="col-md-6">
+                <h3 class="about-title">Um site que te aproxima da música</h3>
+                <p>O My Music se adapta a você.</p>
+                <p>Aqui você pode encontrar suas músicas e artistas favoritos, criar suas playlists e acompanhar todas as tendências musicais do momento, além é claro, se conectar à pessoas da comunidade My Music.</p>
+                <p>É música que você quer? Aqui você tem!</p>
+                <p>O que você encontra aqui:</p>
+                <ul id="about-list">
+                  <li><i class="fas fa-check"></i> Músicas e Vídeoclipes</li>
+                  <li><i class="fas fa-check"></i> Artistas e Bandas</li>
+                  <li><i class="fas fa-check"></i> Playlists prontas e personalizáveis</li>
+                  <li><i class="fas fa-check"></i> Uma comunidade fissurada em música</li>
+                  <li><i class="fas fa-check"></i> E muuuuito conteúdo musical</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- Playlists -->
+      <div id="playlists-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+                <h3 class="main-title">Playlists</h3>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-globe-americas"></i>
+              <h4>Mais tocadas no Mundo</h4>
+              <p>Veja quais os hits mais tocados no mundo todo.</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <h4>Mais tocadas no Brasil</h4>
+              <p>Encontre as músicas mais tocadas no Brasil.</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-umbrella-beach"></i>
+              <h4>Verão</h4>
+              <p>Aproveite seu verão com as músicas mais badaladas do momento.</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-running"></i>
+              <h4>Para exercitar</h4>
+              <p>Exercite-se ouvindo aquela playlist alto astral?</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-couch"></i>
+              <h4>Para relaxar</h4>
+              <p>Encontre playlists para para dormir, meditar, trabalhar...</p>
+            </div>
+            <div class="col-md-4 service-box">
+              <i class="fas fa-edit"></i>
+              <h4>Personalizadas</h4>
+              <p>Crie as suas próprias playlists!!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Top Músicas -->
+      <div id="top-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="main-title">Top Mais</h3>
+            </div>
+            <div class="col-md-12" id="filter-btn-box">
+              <button class="main-btn filter-btn active" id="all-btn">Músicas</button>
+              <button class="main-btn filter-btn" id="dev-btn">Artistas</button>
+              <button class="main-btn filter-btn" id="dsg-btn">Bandas</button>
+              <button class="main-btn filter-btn" id="seo-btn">Outros</button>
+            </div>
+            <div class="col-md-4 project-box dev">
+              <img src="img/proj1.jpg" class="img-fluid" alt="Projeto 1">
+            </div>
+            <div class="col-md-4 project-box dsg">
+              <img src="img/proj2.jpg" class="img-fluid" alt="Projeto 2">
+            </div>
+            <div class="col-md-4 project-box seo">
+              <img src="img/proj3.jpg" class="img-fluid" alt="Projeto 3">
+            </div>
+            <div class="col-md-4 project-box dev">
+              <img src="img/proj4.jpg" class="img-fluid" alt="Projeto 4">
+            </div>
+            <div class="col-md-4 project-box dsg">
+              <img src="img/proj5.jpg" class="img-fluid" alt="Projeto 5">
+            </div>
+            <div class="col-md-4 project-box seo">
+              <img src="img/proj6.jpg" class="img-fluid" alt="Projeto 6">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Cadastrar -->
+      <div id="call-area">
+        <div class="container">
+            <div class="row">
+              <p>Gostou do que viu até aqui? Faça já seu Cadastro!</p>
+              <button class="main-btn" id="call-btn">Cadastrar</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </main>
+  <!-- Rodapé -->
+  <footer>
+    <div id="contact-area">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-6" id="msg-box">
+              <p>Deixe sua sugestão de melhoria:</p>
+            </div>
+            <div class="col-md-6" id="contact-form">
+              <form action="">
+                <input type="text" class="form-control" placeholder="Nome" name="subject">
+                <input type="text" class="form-control" placeholder="E-mail" name="email">                
+                <textarea class="form-control" rows="3" placeholder="Sua mensagem..." name="message"></textarea>
+                <input type="submit" class="main-btn">
+              </form>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div id="copy-area">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <p>Desenvolvido por <a href="#" target="_blank">Iago Novaes</a> &copy; 2021</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Scripts do projeto -->
+  <script src="js/scripts.js"></script>
+</body>
+</html>
